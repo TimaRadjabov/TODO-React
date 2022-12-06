@@ -1,0 +1,10 @@
+.clock{
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: rgb(32, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}

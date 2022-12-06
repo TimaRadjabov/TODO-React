@@ -1,0 +1,23 @@
+footer {
+    padding: 20px 0;
+    background: linear-gradient(104.8deg, #997718 42.27%, #aa7b14 64.88%);
+    color: black;
+}
+.header__body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width: 32px;
+    height: 32px;
+}
+.header__descr{
+    text-align: center;
+    font-style: italic;
+}
+.phone-block__number{
+    font-size: 16px;
+    font-weight: 500;
+    
+}

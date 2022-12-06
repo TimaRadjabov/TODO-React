@@ -1,0 +1,11 @@
+.searching{
+    padding: 25px 0;
+    background-color: rgb(173, 109, 36);
+    border-radius: 4px;
+    color: #fff;
+}
+.searching input{
+    width: 1000px;
+    margin: 0 auto;
+    box-shadow: none;
+}
