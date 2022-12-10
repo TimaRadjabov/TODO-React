@@ -1,6 +1,23 @@
 import { Component } from "react";
-import "./employeesAddForm.css";
+import styled from "styled-components";
 
+
+
+const WrapperForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  background-color: rgb(173, 109, 36);
+  color: #fff;
+  input {
+    width: 350px;
+    margin-right: 20px;
+  }
+`;
+const AddForm = styled.form`
+  margin-top: 20px;
+`;
 class EmployeesAddForm extends Component {
   constructor(props) {
     super(props);
@@ -16,15 +33,14 @@ class EmployeesAddForm extends Component {
   };
 
   render() {
-    let {name, salary} = this.state;
-    let {onAdd} = this.props;
+    let { name, salary } = this.state;
+    let { onAdd } = this.props;
     return (
-      <div className="app-add-form">
+      <WrapperForm>
         <h3>Добавьте нового сотрудника</h3>
-        <form className="add-form d-flex" onSubmit={onAdd}>
+        <AddForm onSubmit={onAdd}>
           <input
             type="text"
-            className="form-control new-post-label"
             placeholder="Как его зовут?"
             name="name"
             onChange={this.onValueChange}
@@ -32,7 +48,6 @@ class EmployeesAddForm extends Component {
           />
           <input
             type="number"
-            className="form-control new-post-label"
             placeholder="З/П в $?"
             name="salary"
             onChange={this.onValueChange}
@@ -42,8 +57,8 @@ class EmployeesAddForm extends Component {
           <button type="submit" className="btn btn-outline-light">
             Добавить
           </button>
-        </form>
-      </div>
+        </AddForm>
+      </WrapperForm>
     );
   }
 }

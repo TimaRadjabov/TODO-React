@@ -1,7 +1,22 @@
-import EmployeesItem from "../EmployeesItem";
-import "./employeesList.css";
+import styled from "styled-components";
 
-const EmployeesList = ({ data, onDelete, onAdd }) => {
+import EmployeesItem from "../EmployeesItem";
+
+
+const AppList = styled.ul`
+  padding: 25px 0;
+  background-color: rgb(173, 109, 36);
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 0;
+`;
+const EmployeesList = ({
+  data,
+  onDelete,
+  onAdd,
+  onToggleIncrease,
+  onToggleRise,
+}) => {
   const elem = data.map((item) => {
     const { id, ...otherItems } = item;
     return (
@@ -10,11 +25,13 @@ const EmployeesList = ({ data, onDelete, onAdd }) => {
         {...otherItems}
         onDelete={() => onDelete(id)}
         onAdd={() => onAdd(...otherItems)}
+        onToggleIncrease={() => onToggleIncrease(id)}
+        onToggleRise={() => onToggleRise(id)}
       />
     );
   });
 
-  return <ul className="app-list list-group">{elem}</ul>;
+  return <AppList>{elem}</AppList>;
 };
 
 export default EmployeesList;

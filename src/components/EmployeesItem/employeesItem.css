@@ -3,6 +3,8 @@
     border-bottom: 1px solid #3d5a80;
     width: 1000px;
     margin: 0 auto;
+    background-color: #fff;
+    color: #000;
 }
 
 .list-group-item:last-child {
